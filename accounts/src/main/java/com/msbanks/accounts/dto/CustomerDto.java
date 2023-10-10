@@ -8,8 +8,11 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
+@Schema(
+        name = "Customer",
+        description = "Schema to hold Customer and Account information"
+)
 public class CustomerDto {
-
 
     @Schema(
             description = "Name of the customer", example = "Eazy Bytes"
