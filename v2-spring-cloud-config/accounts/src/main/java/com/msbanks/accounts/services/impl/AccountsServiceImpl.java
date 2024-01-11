@@ -11,7 +11,7 @@ import com.msbanks.accounts.mapper.AccountsMapper;
 import com.msbanks.accounts.mapper.CustomerMapper;
 import com.msbanks.accounts.repository.AccountsRepository;
 import com.msbanks.accounts.repository.CustomerRepository;
-import com.msbanks.accounts.services.IAccountsServices;
+import com.msbanks.accounts.services.IAccountsService;
 import lombok.*;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ import java.util.Random;
 
 @Service
 @AllArgsConstructor
-public class AccountsServiceImpl implements IAccountsServices {
+public class AccountsServiceImpl implements IAccountsService {
 
     private AccountsRepository accountsRepository;
     private CustomerRepository customerRepository;

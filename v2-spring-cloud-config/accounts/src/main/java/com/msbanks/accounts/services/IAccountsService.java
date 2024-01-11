@@ -2,7 +2,7 @@ package com.msbanks.accounts.services;
 
 import com.msbanks.accounts.dto.CustomerDto;
 
-public interface IAccountsServices {
+public interface IAccountsService {
     /**
      *
      * @param customerDto

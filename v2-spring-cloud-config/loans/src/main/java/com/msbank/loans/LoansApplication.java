@@ -16,7 +16,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaRepositories("com.eazybytes.loans.repository")
 @EntityScan("com.eazybytes.loans.model")*/
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
-@EnableConfigurationProperties(value = (LoansContactInfoDTO.class))
+@EnableConfigurationProperties(value = {LoansContactInfoDTO.class})
 @OpenAPIDefinition(
 		info = @Info(
 				title = "Loans microservice REST API Documentation",
