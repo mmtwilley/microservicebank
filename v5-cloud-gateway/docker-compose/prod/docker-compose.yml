@@ -28,7 +28,10 @@ services:
       start_period: 10s
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-base-config
+    depends_on:
+      configserver:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "eurekaserver"
 
@@ -41,7 +44,7 @@ services:
       SPRING_APPLICATION_NAME: "accounts"
     extends:
       file: common-config.yml
-      service: microservice-eureka-config
+      service: microservice-configserver-config
 
   loans:
     image: "mtwilley/loans:s8"
@@ -52,7 +55,7 @@ services:
       SPRING_APPLICATION_NAME: "loans"
     extends:
       file: common-config.yml
-      service: microservice-eureka-config
+      service: microservice-configserver-config
 
   cards:
     image: "mtwilley/cards:s8"
@@ -63,7 +66,7 @@ services:
       SPRING_APPLICATION_NAME: "cards"
     extends:
       file: common-config.yml
-      service: microservice-eureka-config
+      service: microservice-configserver-config
 
 networks:
   msbank:
